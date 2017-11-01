@@ -1,0 +1,6 @@
+title: Open Ideas
+timezone: UTC
+collections:
+  ideas:
+    title: Ideas
+    output: true
