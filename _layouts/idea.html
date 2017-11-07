@@ -3,21 +3,35 @@
 <head>
   <title>Open Ideas</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <link rel="stylesheet" href="{{site.baseurl}}/css/main.css">
 </head>
 
 
 <body data-gr-c-s-loaded="true">
 
+  <div id="wrap">
 
     {% include navbar.html %}
+    <div id="main">
 
-    <div class="container">
-      {{ content }}
+      <section class="jumbotron text-center" style="{% if page.image %}background-image: url({{site.baseurl}}{{site.images_path}}/{{page.image.large}});  background-size: cover;background-position: center;{% endif %}">
+        <div class="container">
+          <h1 class="jumbotron-heading {% if page.image %}text-light {% endif %}">{{page.title}}</h1>
+          <p class="lead text-muted text-light">{{page.description}}</p>
+          <p>
+            <a href="#" class="btn btn-primary">Main call to action</a>
+          </p>
+        </div>
+      </section>
 
-      <a href="https://github.com/dsmrs/open-ideas/tree/gh-pages/{{ page.path }}">{% octicon mark-github %}</a>
+      <div class="container">
+        {{ content }}
 
+        <a href="https://github.com/dsmrs/open-ideas/tree/gh-pages/{{ page.path }}">{% octicon mark-github %}</a>
+
+      </div>
     </div>
-
+  </div>
 
     {% include footer.html %}
 

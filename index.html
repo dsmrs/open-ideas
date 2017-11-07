@@ -8,10 +8,9 @@ layout: default
   <section class="jumbotron text-center">
     <div class="container">
       <h1 class="jumbotron-heading">Open Ideas</h1>
-      <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
+      <p class="lead text-muted">share, change, document, hack, improve ideas</p>
       <p>
         <a href="#" class="btn btn-primary">Main call to action</a>
-        <a href="#" class="btn btn-secondary">Secondary action</a>
       </p>
     </div>
   </section>
@@ -21,9 +20,11 @@ layout: default
       <div class="card-columns">
         {% for idea in site.ideas %}
           <div class="card">
-            <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+            {% if idea.image and idea.image.small %}
+              <img class="card-img-top" src="{{site.baseurl}}/{{site.images_path}}/{{idea.image.small}}" alt="Card image cap">
+            {% endif %}
             <div class="card-body">
-              <a href="{{idea.url}}"><h4 class="card-title">{{ idea.title }}</h4></a>
+              <a href="{{site.baseurl}}{{idea.url}}"><h4 class="card-title">{{ idea.title }}</h4></a>
               <p class="card-text">{{ idea.description }}</p>
               <span class="badge badge-secondary {{ idea.state }}">{{ idea.state }}</span>
               <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
