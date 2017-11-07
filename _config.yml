@@ -2,5 +2,17 @@ title: Open Ideas
 timezone: UTC
 collections:
   ideas:
-    title: Ideas
+    permalink: /:collection/:name
     output: true
+plugins:
+  - jekyll-paginate
+paginate: 10
+paginate_path: "/page:num/"
+defaults:
+  - scope:
+      path: ""
+      type: ideas
+    values:
+      layout: idea
+gems:
+  - jekyll-octicons
