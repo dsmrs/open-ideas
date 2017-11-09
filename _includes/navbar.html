@@ -1,12 +1,15 @@
 <nav class="navbar sticky-top navbar-dark bg-dark">
-  <a class="navbar-brand" href="{{site.baseurl}}/">
-    {% octicon beaker class:"fill-green" %}
-    <span>Open Ideas </span>
-  </a>
-  <span class="navbar-brand">(alpha)</span>
-  <ul class="navbar-nav mr-auto">
-    <li class="nav-item active">
-      <a class="nav-link" href="{{site.baseurl}}/about">About</a>
-    </li>
-  </ul>
+  <div class="container">
+    <a class="navbar-brand" href="{{site.baseurl}}/">
+      <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+      <span>Open Ideas </span>
+      <span class="badge badge-info">alpha</span>
+    </a>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item {% if page.url == '/about.html' %}active{% endif %}">
+        <a class="nav-link" href="{{site.baseurl}}/about">About</a>
+      </li>
+    </ul>
+    <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#signUpModal">Login</button>
+  </div>
 </nav>

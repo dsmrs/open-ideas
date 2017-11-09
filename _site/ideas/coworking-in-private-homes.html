@@ -4,6 +4,7 @@
   <title>Open Ideas</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
   <link rel="stylesheet" href="/open-ideas/css/main.css">
+  <script src="https://use.fontawesome.com/faef1289ed.js"></script>
 </head>
 
 
@@ -12,35 +13,69 @@
   <div id="wrap">
 
     <nav class="navbar sticky-top navbar-dark bg-dark">
-  <a class="navbar-brand" href="/open-ideas/">
-    <svg class="octicon octicon-beaker fill-green" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14.38 14.59L11 7V3h1V2H3v1h1v4L.63 14.59A1 1 0 0 0 1.54 16h11.94c.72 0 1.2-.75.91-1.41h-.01zM3.75 10L5 7V3h5v4l1.25 3h-7.5zM8 8h1v1H8V8zM7 7H6V6h1v1zm0-3h1v1H7V4zm0-3H6V0h1v1z"/></svg>
-    <span>Open Ideas </span>
-  </a>
-  <span class="navbar-brand">(alpha)</span>
-  <ul class="navbar-nav mr-auto">
-    <li class="nav-item active">
-      <a class="nav-link" href="/open-ideas/about">About</a>
-    </li>
-  </ul>
+  <div class="container">
+    <a class="navbar-brand" href="/open-ideas/">
+      <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+      <span>Open Ideas </span>
+      <span class="badge badge-info">alpha</span>
+    </a>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item ">
+        <a class="nav-link" href="/open-ideas/about">About</a>
+      </li>
+    </ul>
+    <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#signUpModal">Login</button>
+  </div>
 </nav>
 
     <div id="main">
 
       <section class="jumbotron text-center" style="">
         <div class="container">
-          <h1 class="jumbotron-heading ">Co-working space in private homes</h1>
-          <p class="lead text-muted text-light">Use the house of somebody else to work.</p>
-          <p>
-            <a href="#" class="btn btn-primary">Main call to action</a>
-          </p>
+            <div class="text-right pb-5">
+              <span data-toggle="modal" data-target="#needSignUpModal">
+                <button type="button" class="btn btn-primary btn-sm" data-toggle="tooltip" data-placement="bottom" title="Copy this idea and modify it!">
+                  <i class="fa fa-clone" aria-hidden="true"></i> Clone
+                </button>
+              </span>
+              <span data-toggle="modal" data-target="#needSignUpModal">
+                <button type="button" class="btn btn-primary btn-sm" data-toggle="tooltip" data-placement="bottom" title="Be notify from updates">
+                  <i class="fa fa-eye" aria-hidden="true"></i> Follow
+                </button>
+              </span>
+              <span data-toggle="modal" data-target="#needSignUpModal">
+                <button type="button" class="btn btn-primary btn-sm" data-toggle="tooltip" data-placement="bottom" title="Support this idea">
+                  <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> Support
+                </button>
+              </span>
+            </div>
+            <h1 class="jumbotron-heading ">Co-working space in private homes</h1>
+            <p class="lead text-muted text-light">Use the house of somebody else to work.</p>
+
         </div>
       </section>
 
       <div class="container">
-        <h1 id="co-working-space-in-private-homes">Co-working space in private homes</h1>
+        <div class="d-flex">
+          <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <a class="nav-link active" id="v-pills-description-tab" data-toggle="pill" href="#v-pills-description" role="tab" aria-controls="v-pills-description" aria-selected="true">Description</a>
+            <a class="nav-link" id="v-pills-business-tab" data-toggle="pill" href="#v-pills-business" role="tab" aria-controls="v-pills-business" aria-selected="false">Business Plan</a>
+            <a class="nav-link" id="v-pills-wiki-tab" data-toggle="pill" href="#v-pills-wiki" role="tab" aria-controls="v-pills-wiki" aria-selected="false">Wiki</a>
+          </div>
+          <div class="tab-content p-3 m-3" id="v-pills-tabContent">
+            <div class="tab-pane fade show active" id="v-pills-description" role="tabpanel" aria-labelledby="v-pills-description-tab">
+              <h1 id="co-working-space-in-private-homes">Co-working space in private homes</h1>
+
+              <p class="mt-5">
+                <a class="btn btn-dark btn" href="https://github.com/dsmrs/open-ideas/tree/gh-pages/_ideas/coworking_in_private_homes.md"><i class="fa fa-github" aria-hidden="true"></i> Edit this text in Github.</a>
+              </p>
+            </div>
+            <div class="tab-pane fade" id="v-pills-business" role="tabpanel" aria-labelledby="v-pills-business-tab">...</div>
+            <div class="tab-pane fade" id="v-pills-wiki" role="tabpanel" aria-labelledby="v-pills-wiki-tab">...</div>
+          </div>
+        </div>
 
 
-        <a href="https://github.com/dsmrs/open-ideas/tree/gh-pages/_ideas/coworking_in_private_homes.md"><svg class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg></a>
 
       </div>
     </div>
@@ -52,14 +87,142 @@
       <a href="#">Back to top</a>
     </p>
     <p>This a first draft of what could be Open Ideas!</p>
-    <p><a href="/open-ideas/about">Learn more</a> or go to <a href="">Github</a>.</p>
+    <p><a href="/open-ideas/about">Learn more</a> or go to <a href="https://www.github.com/dsmrs/open-ideas">Github</a>.</p>
   </div>
 </footer>
+
+    <!-- Modal SignUpModal--->
+<div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="signUpModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="signUpModalLabel">Signup</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form action="https://m4kers.us10.list-manage.com/subscribe/post?u=5c34adf9c85700841f7de761f&amp;id=a24535dec3" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+<div class="modal-body">
+  <!-- Begin MailChimp Signup Form -->
+
+
+
+    <div class="input-group">
+      <span class="input-group-addon" id="basic-addon1">@</span>
+      <input type="email" name="EMAIL" required id="mce-EMAIL" class="form-control required" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1">
+    </div>
+    <div class="p-2 mt-2">
+
+      <h6>What's do you want to do ? </h6>
+
+      <div class="form-check">
+        <label class="form-check-label" for="mce-group[11457]-11457-0">
+          <input type="checkbox" class="form-check-input" value="1" name="group[11457][1]" id="mce-group[11457]-11457-0">
+          Edit an idea
+        </label>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label" for="mce-group[11457]-11457-1">
+          <input type="checkbox" class="form-check-input" value="1" name="group[11457][1]" id="mce-group[11457]-11457-1">
+          Post an idea
+        </label>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label" for="mce-group[11457]-11457-2">
+          <input type="checkbox" class="form-check-input" value="4" name="group[11457][4]" id="mce-group[11457]-11457-2">
+          Be involved in <strong>Open Ideas</strong>
+        </label>
+      </div>
+    </div>
+    <div id="mce-responses" class="clear">
+      <div class="alert alert-warning" role="alert" id="mce-error-response" style="display:none"></div>
+      <div class="alert alert-success" role="alert" id="mce-success-response" style="display:none"></div>
+    </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_5c34adf9c85700841f7de761f_a24535dec3" tabindex="-1" value=""></div>
+    <div class="clear"></div>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+  <input type="submit" value="Create an account" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary"></div>
+</div>
+</form>
+
+    </div>
+  </div>
+</div>
+
+<!-- Modal needSignUpModal--->
+<div class="modal fade" id="needSignUpModal" tabindex="-1" role="dialog" aria-labelledby="needSignUpModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="needSignUpModalLabel">You need to create an account first!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form action="https://m4kers.us10.list-manage.com/subscribe/post?u=5c34adf9c85700841f7de761f&amp;id=a24535dec3" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+<div class="modal-body">
+  <!-- Begin MailChimp Signup Form -->
+
+
+
+    <div class="input-group">
+      <span class="input-group-addon" id="basic-addon1">@</span>
+      <input type="email" name="EMAIL" required id="mce-EMAIL" class="form-control required" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1">
+    </div>
+    <div class="p-2 mt-2">
+
+      <h6>What's do you want to do ? </h6>
+
+      <div class="form-check">
+        <label class="form-check-label" for="mce-group[11457]-11457-0">
+          <input type="checkbox" class="form-check-input" value="1" name="group[11457][1]" id="mce-group[11457]-11457-0">
+          Edit an idea
+        </label>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label" for="mce-group[11457]-11457-1">
+          <input type="checkbox" class="form-check-input" value="1" name="group[11457][1]" id="mce-group[11457]-11457-1">
+          Post an idea
+        </label>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label" for="mce-group[11457]-11457-2">
+          <input type="checkbox" class="form-check-input" value="4" name="group[11457][4]" id="mce-group[11457]-11457-2">
+          Be involved in <strong>Open Ideas</strong>
+        </label>
+      </div>
+    </div>
+    <div id="mce-responses" class="clear">
+      <div class="alert alert-warning" role="alert" id="mce-error-response" style="display:none"></div>
+      <div class="alert alert-success" role="alert" id="mce-success-response" style="display:none"></div>
+    </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_5c34adf9c85700841f7de761f_a24535dec3" tabindex="-1" value=""></div>
+    <div class="clear"></div>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+  <input type="submit" value="Create an account" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary"></div>
+</div>
+</form>
+
+    </div>
+  </div>
+</div>
 
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-
+  <script type="text/javascript">
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
+  <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+  <script type='text/javascript'>
+    (function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);
+  </script>
 </body>
 </html>

@@ -4,6 +4,7 @@
   <title>Open Ideas</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
   <link rel="stylesheet" href="{{site.baseurl}}/css/main.css">
+  <script src="https://use.fontawesome.com/faef1289ed.js"></script>
 </head>
 
 
@@ -16,28 +17,68 @@
 
       <section class="jumbotron text-center" style="{% if page.image %}background-image: url({{site.baseurl}}{{site.images_path}}/{{page.image.large}});  background-size: cover;background-position: center;{% endif %}">
         <div class="container">
-          <h1 class="jumbotron-heading {% if page.image %}text-light {% endif %}">{{page.title}}</h1>
-          <p class="lead text-muted text-light">{{page.description}}</p>
-          <p>
-            <a href="#" class="btn btn-primary">Main call to action</a>
-          </p>
+            <div class="text-right pb-5">
+              <span data-toggle="modal" data-target="#needSignUpModal">
+                <button type="button" class="btn btn-primary btn-sm" data-toggle="tooltip" data-placement="bottom" title="Copy this idea and modify it!">
+                  <i class="fa fa-clone" aria-hidden="true"></i> Clone
+                </button>
+              </span>
+              <span data-toggle="modal" data-target="#needSignUpModal">
+                <button type="button" class="btn btn-primary btn-sm" data-toggle="tooltip" data-placement="bottom" title="Be notify from updates">
+                  <i class="fa fa-eye" aria-hidden="true"></i> Follow
+                </button>
+              </span>
+              <span data-toggle="modal" data-target="#needSignUpModal">
+                <button type="button" class="btn btn-primary btn-sm" data-toggle="tooltip" data-placement="bottom" title="Support this idea">
+                  <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> Support
+                </button>
+              </span>
+            </div>
+            <h1 class="jumbotron-heading {% if page.image %}text-light {% endif %}">{{page.title}}</h1>
+            <p class="lead text-muted text-light">{{page.description}}</p>
+
         </div>
       </section>
 
       <div class="container">
-        {{ content }}
+        <div class="d-flex">
+          <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <a class="nav-link active" id="v-pills-description-tab" data-toggle="pill" href="#v-pills-description" role="tab" aria-controls="v-pills-description" aria-selected="true">Description</a>
+            <a class="nav-link" id="v-pills-business-tab" data-toggle="pill" href="#v-pills-business" role="tab" aria-controls="v-pills-business" aria-selected="false">Business Plan</a>
+            <a class="nav-link" id="v-pills-wiki-tab" data-toggle="pill" href="#v-pills-wiki" role="tab" aria-controls="v-pills-wiki" aria-selected="false">Wiki</a>
+          </div>
+          <div class="tab-content p-3 m-3" id="v-pills-tabContent">
+            <div class="tab-pane fade show active" id="v-pills-description" role="tabpanel" aria-labelledby="v-pills-description-tab">
+              {{ content }}
+              <p class="mt-5">
+                <a class="btn btn-dark btn" href="https://github.com/dsmrs/open-ideas/tree/gh-pages/{{ page.path }}"><i class="fa fa-github" aria-hidden="true"></i> Edit this text in Github.</a>
+              </p>
+            </div>
+            <div class="tab-pane fade" id="v-pills-business" role="tabpanel" aria-labelledby="v-pills-business-tab">...</div>
+            <div class="tab-pane fade" id="v-pills-wiki" role="tabpanel" aria-labelledby="v-pills-wiki-tab">...</div>
+          </div>
+        </div>
 
-        <a href="https://github.com/dsmrs/open-ideas/tree/gh-pages/{{ page.path }}">{% octicon mark-github %}</a>
+
 
       </div>
     </div>
   </div>
 
     {% include footer.html %}
+    {% include modals.html %}
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-
+  <script type="text/javascript">
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
+  <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+  <script type='text/javascript'>
+    (function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);
+  </script>
 </body>
 </html>

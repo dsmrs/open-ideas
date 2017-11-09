@@ -1,0 +1,29 @@
+<!-- Modal SignUpModal--->
+<div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="signUpModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="signUpModalLabel">Signup</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      {% include signup_form.html %}
+    </div>
+  </div>
+</div>
+
+<!-- Modal needSignUpModal--->
+<div class="modal fade" id="needSignUpModal" tabindex="-1" role="dialog" aria-labelledby="needSignUpModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="needSignUpModalLabel">You need to create an account first!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      {% include signup_form.html %}
+    </div>
+  </div>
+</div>
