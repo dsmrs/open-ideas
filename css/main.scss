@@ -21,3 +21,9 @@ footer {
   clear:both;
   padding-top:20px;
 }
+
+.cover {
+  backdrop-filter: blur(1px);
+  background: rgba(0,0,0,.6);
+  backdrop-filter: grayscale(1) contrast(3) blur(1px);
+}

@@ -1,7 +1,5 @@
 ---
 title: Self service bar
 description: Restore bars in the countryside with cooperatives.
-state:
+state: draft
 ---
-
-# Self service bar

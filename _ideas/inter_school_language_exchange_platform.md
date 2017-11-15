@@ -5,4 +5,4 @@ state: draft
 layout: idea
 ---
 
-# Inter-school language exchange platform
+Build an online platform to connect student to learn new languages or shared knowledge.

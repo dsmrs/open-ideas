@@ -12,6 +12,7 @@
 
   <div id="wrap">
     {% include navbar.html %}
+    {% include alerts.html %}
     <div id="main">
       {{ content }}
     </div>
@@ -28,6 +29,23 @@
   <script type='text/javascript'>
     (function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);
   </script>
-
+  <script type="text/javascript">
+  (function() {
+      document.getElementById('mc-embedded-subscribe').addEventListener('click', function(e) {
+        setTimeout(function() {
+          var elError = document.getElementById('mce-error-response');
+          var elSuccess = document.getElementById('mce-success-response');
+          if((elError && elError.style.display !== 'none') || (elSuccess && elSuccess.style.display !== 'none')) {
+            $('#signUpModal').modal('hide');
+            setTimeout(function() {
+              elError.style.display = 'none';
+              elSuccess.style.display = 'none';
+            }, 4000);
+          }
+        }, 1000)
+        // TODO: setInterval
+      });
+  })();
+  </script>
 </body>
 </html>

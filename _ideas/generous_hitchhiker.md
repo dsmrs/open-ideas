@@ -7,4 +7,4 @@ image:
   large: hitchhiker_large.jpg
 ---
 
-# Generous hitchhiker
+Thank a drive by send trough his phone number a contribution for the ride. (Could be local money, digital currencies, ...)
