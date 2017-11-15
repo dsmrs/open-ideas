@@ -21,3 +21,4 @@ images_path: /assets/img
 sass:
   sass_dir: _sass
 repo: "https://www.github.com/dsmrs/open-ideas"
+google_analytics: UA-74750341-1

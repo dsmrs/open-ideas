@@ -1,12 +1,11 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <title>Open Ideas</title>
+  <title>{{site.title}}</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
   <link rel="stylesheet" href="{{site.baseurl}}/css/main.css">
   <link rel="shortcut icon" href="{{ site.baseurl }}/assets/favicon.ico">
   <script src="https://use.fontawesome.com/faef1289ed.js"></script>
-  <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/5c34adf9c85700841f7de761f/1915e846746f35e315f18be3d.js");</script>
 </head>
 
 
@@ -43,11 +42,23 @@
               elError.style.display = 'none';
               elSuccess.style.display = 'none';
             }, 4000);
+            ga('send', 'event', 'account', 'signup');
           }
         }, 1000)
         // TODO: setInterval
       });
   })();
   </script>
+  <!-- Google Analytics -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', '{{site.google_analytics}}', 'auto');
+  ga('send', 'pageview');
+  </script>
+<!-- End Google Analytics -->
 </body>
 </html>

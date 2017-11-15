@@ -189,5 +189,35 @@
   <script type='text/javascript'>
     (function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);
   </script>
+  <script type="text/javascript">
+  (function() {
+      document.getElementById('mc-embedded-subscribe').addEventListener('click', function(e) {
+        setTimeout(function() {
+          var elError = document.getElementById('mce-error-response');
+          var elSuccess = document.getElementById('mce-success-response');
+          if((elError && elError.style.display !== 'none') || (elSuccess && elSuccess.style.display !== 'none')) {
+            $('#signUpModal').modal('hide');
+            setTimeout(function() {
+              elError.style.display = 'none';
+              elSuccess.style.display = 'none';
+            }, 4000);
+            ga('send', 'event', 'account', 'signup');
+          }
+        }, 1000)
+        // TODO: setInterval
+      });
+  })();
+  </script>
+  <!-- Google Analytics -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-74750341-1', 'auto');
+  ga('send', 'pageview');
+  </script>
+<!-- End Google Analytics -->
 </body>
 </html>
