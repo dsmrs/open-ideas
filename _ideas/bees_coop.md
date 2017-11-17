@@ -8,4 +8,4 @@ image:
 business_plan: "http://bees-coop.be/wp-content/uploads/2016/12/PF_RESUME.pdf"
 ---
 
-BEES c’est la Cooperative bruxelloise écologique économique et sociale. Notre initiative citoyenne a pour but de créer une alternative à la grande distribution classique, en proposant des produits de qualité à des prix accessibles à tous.
+BEES is the Brussels Economic and Social Ecological Cooperative. Our citizens' initiative aims to create an alternative to traditional mass distribution, by offering quality products at prices accessible to all.
